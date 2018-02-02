@@ -97,6 +97,10 @@ function lazyImageCSS(options) {
                     }
 
                     var info = fastImageSize(absolutePath);
+                    
+                    if(!info){
+                        continue;
+                    }
 
                     if (info.type === 'unknown') {
                         console.log('' + 'unknown type: ' + absolutePath);
